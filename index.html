@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Segura | Cidadania Digital e IA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+        <div class="logo">
+            <h1>Cidadania<span>Digital</span></h1>
+        </div>
+        <button id="toggle-accessibility" class="btn-accessible" aria-label="Alternar modo escuro">🌓 Modo Escuro</button>
+    </header>
+
+    <!-- Conteúdo Principal Semântico -->
+    <main>
+        
+        <!-- Seção 1: Introdução e Contextualização -->
+        <section class="hero-section">
+            <h2>O Impacto das Deepfakes e da Desinformação na Sociedade</h2>
+            <p>Na era da Inteligência Artificial, a verdade tornou-se um terreno disputado. Vídeos, áudios e imagens manipulados digitalmente (deepfakes) testam nossa capacidade de discernir o real do fabricado. Desenvolver a cidadania digital significa blindar nossa mente contra a desinformação automatizada.</p>
+        </section>
+
+        <!-- Seção 2: Guia de Identificação -->
+        <section class="guide-section">
+            <h3>Como Identificar uma Mídia Manipulada por IA?</h3>
+            <div class="cards-container">
+                <div class="card">
+                    <h4>Pisos e Sombras</h4>
+                    <p>Fique atento a falhas na iluminação e reflexos irregulares nos olhos do interlocutor.</p>
+                </div>
+                <div class="card">
+                    <h4>Padrão de Piscada</h4>
+                    <p>Muitas deepfakes falham em replicar o ato natural e frequente de piscar os olhos.</p>
+                </div>
+                <div class="card">
+                    <h4>Áudio Dessincronizado</h4>
+                    <p>Preste atenção se os movimentos labiais correspondem perfeitamente aos fonemas emitidos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Quiz Anti-Desinformação (Interatividade Obrigatória) -->
+        <section class="quiz-section">
+            <h3>Desafio da Verdade: Teste seus Conhecimentos</h3>
+            <p>Responda às perguntas abaixo e descubra se você está imune às armadilhas da desinformação.</p>
+            
+            <form id="quiz-form">
+                <!-- Pergunta 1 -->
+                <div class="quiz-group">
+                    <label for="q1">1. Se você recebe um vídeo bombástico de um político famoso cometendo um crime, qual o primeiro passo?</label>
+                    <select id="q1" required>
+                        <option value="">-- Selecione uma resposta --</option>
+                        <option value="errada">Compartilhar imediatamente nos grupos de família.</option>
+                        <option value="correta">Verificar em portais de checagem confiáveis e analisar os detalhes visuais.</option>
+                        <option value="errada">Acreditar piamente, pois vídeos não podem ser manipulados.</option>
+                    </select>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="quiz-group">
+                    <label for="q2">2. O que caracteriza essencialmente uma "Deepfake"?</label>
+                    <select id="q2" required>
+                        <option value="">-- Selecione uma resposta --</option>
+                        <option value="errada">Uma notícia escrita com erros de gramática propositais.</option>
+                        <option value="errada">Uma montagem simples feita no Photoshop antigo.</option>
+                        <option value="correta">Vídeos ou áudios gerados por Inteligência Artificial que imitam perfeitamente pessoas reais.</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Respostas</button>
+            </form>
+
+            <!-- Div manipulada dinamicamente via JS -->
+            <div id="quiz-result" class="result-box hidden">
+                <p id="result-text"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé Semântico -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Conexão Segura. Desenvolvido para a Recuperação de Educação Digital e IA.</p>
+        <p>Projeto focado no debate ético e segurança digital comunitária.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
