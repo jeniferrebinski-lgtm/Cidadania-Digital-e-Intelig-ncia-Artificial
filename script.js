@@ -1,50 +1,42 @@
-// Aguarda o carregamento total do DOM antes de executar scripts
-document.addEventListener("DOMContentLoaded", () => {
-    
-    // --- Módulo de Acessibilidade (Modo Escuro) ---
-    const toggleButton = document.getElementById("toggle-accessibility");
-    
-    toggleButton.addEventListener("click", () => {
-        // Altera dinamicamente a classe no body
-        document.body.classList.toggle("dark-mode");
-        
-        // Altera o texto interno do botão para feedback visual claro
-        if (document.body.classList.contains("dark-mode")) {
-            toggleButton.textContent = "☀️ Modo Claro";
-        } else {
-            toggleButton.textContent = "¼ Modo Escuro";
-        }
-    });
 
-    // --- Módulo do Quiz Anti-Desinformação ---
-    const quizForm = document.getElementById("quiz-form");
-    const resultBox = document.getElementById("quiz-result");
-    const resultText = document.getElementById("result-text");
+const botao = document.getElementById("modoEscuro");
 
-    quizForm.addEventListener("submit", (event) => {
-        // Previne o recarregamento automático padrão da página
-        event.preventDefault();
+botao.addEventListener("click", () => {
 
-        // Captura e processamento de dados usando variáveis locais
-        const answerOne = document.getElementById("q1").value;
-        const answerTwo = document.getElementById("q2").value;
-        
-        let score = 0;
+document.body.classList.toggle("dark");
 
-        if (answerOne === "correta") score++;
-        if (answerTwo === "correta") score++;
+});
 
-        // Manipulação dinâmica do DOM para exibição dos resultados
-        resultBox.classList.remove("hidden");
-        
-        if (score === 2) {
-            resultText.textContent = "Excelente! Você acertou todas (2/2). Sua capacidade de discernimento contra deepfakes está afiada!";
-            resultBox.style.backgroundColor = "#d4edda";
-            resultBox.style.color = "#155724";
-        } else {
-            resultText.textContent = `Você acertou ${score} de 2 questões. Atenção redobrada ao navegar pelas redes sociais!`;
-            resultBox.style.backgroundColor = "#fff3cd";
-            resultBox.style.color = "#856404";
-        }
-    });
+const quiz = document.getElementById("formQuiz");
+
+quiz.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+const resposta = document.querySelector('input[name="resposta"]:checked');
+
+const resultado = document.getElementById("resultado");
+
+if(!resposta){
+
+resultado.innerHTML="Escolha uma resposta.";
+
+return;
+
+}
+
+if(resposta.value==="certo"){
+
+resultado.innerHTML="✔️ Parabéns! Você respondeu corretamente.";
+
+resultado.style.color="green";
+
+}else{
+
+resultado.innerHTML="❌ Resposta incorreta. Sempre verifique a fonte antes de compartilhar.";
+
+resultado.style.color="red";
+
+}
+
 });
