@@ -1,121 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cidadania Digital e Inteligência Artificial</title>
-
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania Digital & IA - Consciência contra Deepfakes</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<header>
-<h1>Cidadania Digital e Inteligência Artificial</h1>
+    <header class="main-header">
+        <div class="header-container">
+            <h1>Consciência Digital</h1>
+            <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
+            <button id="toggle-dark-mode" aria-label="Alternar tema de cor" class="btn-secondary">
+                🌓 Mudar Tema
+            </button>
+        </div>
+    </header>
 
-<nav>
-<a href="#deepfake">Deepfakes</a>
-<a href="#fake">Fake News</a>
-<a href="#dicas">Segurança</a>
-<a href="#quiz">Quiz</a>
-</nav>
+    <main class="content-container">
+        
+        <article class="card">
+            <h2>O que são Deepfakes?</h2>
+            <p>Deepfakes são vídeos, áudios ou imagens gerados por algoritmos de <strong>Inteligência Artificial (Redes Neurais)</strong> para simular rostos e vozes com realismo impressionante. Embora tenham usos legítimos no cinema, frequentemente são aplicados para difamação, fraudes financeiras e manipulação de eleições.</p>
+        </article>
 
-<button id="modoEscuro">🌙 Modo Escuro</button>
+        <article class="card">
+            <h2>Guia Prático: Como Identificar Mídias Manipuladas</h2>
+            <p>A inteligência artificial evolui rápido, mas ainda deixa rastros. Fique atento aos seguintes sinais:</p>
+            <ul class="styled-list">
+                <li><strong>Padrões de Movimento:</strong> Piscadas de olhos ausentes, movimentos de boca desalinhados com o áudio.</li>
+                <li><strong>Iluminação Inconsistente:</strong> Sombras artificiais no rosto ou reflexos estranhos nos olhos.</li>
+                <li><strong>Ruído de Fundo:</strong> Áudios com cortes mecânicos bruscos ou variações súbitas de tom.</li>
+                <li><strong>Cruzamento de Dados:</strong> O fato foi noticiado por veículos jornalísticos profissionais independentes?</li>
+            </ul>
+        </article>
 
-</header>
+        <section class="card quiz-card">
+            <h2>Quiz Interativo: Você Sabe Agir?</h2>
+            <p class="quiz-question">Se você receber um vídeo bombástico de uma figura pública no WhatsApp, qual deve ser sua primeira atitude?</p>
+            
+            <form id="quiz-form">
+                <fieldset class="quiz-options">
+                    <legend class="sr-only">Escolha uma das alternativas abaixo:</legend>
+                    
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz" value="errado" required>
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Compartilhar nos grupos para alertar as pessoas o mais rápido possível.</span>
+                    </label>
+                    
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz" value="certo">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Reter o compartilhamento e pesquisar o assunto em agências de checagem.</span>
+                    </label>
+                </fieldset>
+                
+                <button type="submit" class="btn-primary">Validar Minha Resposta</button>
+            </form>
+            
+            <div id="quiz-result" class="result-box hidden" role="alert"></div>
+        </section>
+        
+    </main>
 
-<main>
+    <footer class="main-footer">
+        <p>&copy; 2026 &bull; Componente de Educação Digital e IA &bull; Projeto de Recuperação Prática</p>
+    </footer>
 
-<section id="banner">
-<h2>Como a Inteligência Artificial pode ser usada para o bem e para o mal?</h2>
-
-<p>
-A Inteligência Artificial facilita muitas tarefas, mas também pode ser usada para criar conteúdos falsos, conhecidos como deepfakes, capazes de enganar milhares de pessoas.
-</p>
-
-</section>
-
-<section id="deepfake">
-
-<h2>O que são Deepfakes?</h2>
-
-<p>
-Deepfakes são vídeos, imagens ou áudios criados por Inteligência Artificial que parecem reais, mas foram manipulados digitalmente.
-</p>
-
-</section>
-
-<section id="fake">
-
-<h2>Fake News Automatizadas</h2>
-
-<p>
-Com IA é possível produzir notícias falsas em grande quantidade, espalhando informações enganosas rapidamente pelas redes sociais.
-</p>
-
-</section>
-
-<section id="dicas">
-
-<h2>Como se proteger?</h2>
-
-<ul>
-
-<li>Verifique a fonte da informação.</li>
-
-<li>Desconfie de manchetes sensacionalistas.</li>
-
-<li>Pesquise em mais de um site.</li>
-
-<li>Nunca compartilhe sem confirmar.</li>
-
-<li>Utilize sites de checagem de fatos.</li>
-
-</ul>
-
-</section>
-
-<section id="quiz">
-
-<h2>Quiz</h2>
-
-<p>
-Antes de compartilhar uma notícia, o que você deve fazer?
-</p>
-
-<form id="formQuiz">
-
-<input type="radio" name="resposta" value="errado">
-Compartilhar rapidamente.
-
-<br><br>
-
-<input type="radio" name="resposta" value="certo">
-Verificar a fonte da informação.
-
-<br><br>
-
-<button type="submit">
-Responder
-</button>
-
-</form>
-
-<p id="resultado"></p>
-
-</section>
-
-</main>
-
-<footer>
-
-<p>
-Projeto desenvolvido para Educação Digital e IA - 2026.
-</p>
-
-</footer>
-
-<script src="js/script.js"></script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
