@@ -8,65 +8,69 @@
 </head>
 <body>
 
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
     <header class="main-header">
         <div class="header-container">
-            <h1>Consciência Digital</h1>
-            <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
-            <button id="toggle-dark-mode" aria-label="Alternar tema de cor" class="btn-secondary">
-                🌓 Mudar Tema
+            <div>
+                <h1>Consciência Digital</h1>
+                <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
+            </div>
+            <button id="toggle-dark-mode" aria-label="Ativar modo escuro" class="btn-theme" aria-live="polite">
+                <span class="theme-icon">🌙</span>
+                <span class="theme-text">Modo Escuro</span>
             </button>
         </div>
     </header>
 
-    <main class="content-container">
+    <main id="main-content" class="content-container">
         
-        <article class="card">
-            <h2>O que são Deepfakes?</h2>
-            <p>Deepfakes são vídeos, áudios ou imagens gerados por algoritmos de <strong>Inteligência Artificial (Redes Neurais)</strong> para simular rostos e vozes com realismo impressionante. Embora tenham usos legítimos no cinema, frequentemente são aplicados para difamação, fraudes financeiras e manipulação de eleições.</p>
+        <article class="card" aria-labelledby="about-title">
+            <h2 id="about-title">O que são Deepfakes?</h2>
+            <p>Deepfakes são conteúdos sintéticos (vídeos, áudios ou imagens) gerados por algoritmos avançados de <strong>Inteligência Artificial</strong> capazes de emular rostos e vozes humanas com hiper-realismo. Embora possuam aplicações legítimas na indústria do entretenimento, seu uso malicioso potencializa golpes financeiros, difamação em massa e a desestabilização de processos democráticos através da desinformação.</p>
         </article>
 
-        <article class="card">
-            <h2>Guia Prático: Como Identificar Mídias Manipuladas</h2>
-            <p>A inteligência artificial evolui rápido, mas ainda deixa rastros. Fique atento aos seguintes sinais:</p>
+        <article class="card" aria-labelledby="guide-title">
+            <h2 id="guide-title">Guia Prático de Identificação</h2>
+            <p>A tecnologia de manipulação evolui continuamente, mas os geradores de IA ainda deixam vestígios imperfeitos. Desenvolva seu olhar crítico observando:</p>
             <ul class="styled-list">
-                <li><strong>Padrões de Movimento:</strong> Piscadas de olhos ausentes, movimentos de boca desalinhados com o áudio.</li>
-                <li><strong>Iluminação Inconsistente:</strong> Sombras artificiais no rosto ou reflexos estranhos nos olhos.</li>
-                <li><strong>Ruído de Fundo:</strong> Áudios com cortes mecânicos bruscos ou variações súbitas de tom.</li>
-                <li><strong>Cruzamento de Dados:</strong> O fato foi noticiado por veículos jornalísticos profissionais independentes?</li>
+                <li><strong>Anomalias Faciais:</strong> Frequência de piscadas não natural, desalinhamento perceptível entre o movimento dos lábios e a fala.</li>
+                <li><strong>Inconsistências de Luz:</strong> Sombras fora de posição, ausência de reflexos naturais nas pupilas ou contornos do rosto excessivamente borrados.</li>
+                <li><strong>Artefatos de Áudio:</strong> Variações mecânicas súbitas na entonação da voz ou ruídos metálicos ocultos no fundo.</li>
+                <li><strong>Triangulação de Informação:</strong> Checar se o fato foi validado por agências independentes de jornalismo e checagem de fatos.</li>
             </ul>
         </article>
 
-        <section class="card quiz-card">
-            <h2>Quiz Interativo: Você Sabe Agir?</h2>
-            <p class="quiz-question">Se você receber um vídeo bombástico de uma figura pública no WhatsApp, qual deve ser sua primeira atitude?</p>
+        <section class="card quiz-card" aria-labelledby="quiz-title">
+            <h2 id="quiz-title">Desafio Interativo: Você sabe agir?</h2>
+            <p class="quiz-question">Ao receber um vídeo de impacto social alarmante em uma rede social, qual deve ser o seu procedimento padrão?</p>
             
-            <form id="quiz-form">
-                <fieldset class="quiz-options">
-                    <legend class="sr-only">Escolha uma das alternativas abaixo:</legend>
+            <form id="quiz-form" novalidate>
+                <div class="quiz-options" role="radiogroup" aria-required="true" aria-label="Opções de resposta para o Quiz">
                     
                     <label class="quiz-option">
-                        <input type="radio" name="quiz" value="errado" required>
-                        <span class="custom-radio"></span>
-                        <span class="option-text">Compartilhar nos grupos para alertar as pessoas o mais rápido possível.</span>
+                        <input type="radio" name="quiz" value="errado">
+                        <span class="custom-radio" aria-hidden="true"></span>
+                        <span class="option-text">Compartilhar imediatamente em grupos de mensagens para alertar familiares e amigos sobre o ocorrido.</span>
                     </label>
                     
                     <label class="quiz-option">
                         <input type="radio" name="quiz" value="certo">
-                        <span class="custom-radio"></span>
-                        <span class="option-text">Reter o compartilhamento e pesquisar o assunto em agências de checagem.</span>
+                        <span class="custom-radio" aria-hidden="true"></span>
+                        <span class="option-text">Interromper a cadeia de compartilhamento e verificar a veracidade da mídia em canais oficiais e agências de checagem.</span>
                     </label>
-                </fieldset>
+                </div>
                 
-                <button type="submit" class="btn-primary">Validar Minha Resposta</button>
+                <button type="submit" class="btn-submit">Enviar e Validar Resposta</button>
             </form>
             
-            <div id="quiz-result" class="result-box hidden" role="alert"></div>
+            <div id="quiz-result" class="result-box hidden" role="alert" aria-live="assertive"></div>
         </section>
         
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2026 &bull; Componente de Educação Digital e IA &bull; Projeto de Recuperação Prática</p>
+        <p>&copy; 2026 &bull; Componente Curricular de Educação Digital e IA &bull; Projeto de Recuperação Prática</p>
     </footer>
 
     <script src="js/script.js"></script>
