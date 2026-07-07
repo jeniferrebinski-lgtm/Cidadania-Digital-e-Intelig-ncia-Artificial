@@ -1,93 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conexão Segura | Cidadania Digital e IA</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cidadania Digital e Inteligência Artificial</title>
+
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <!-- Cabeçalho Principal -->
-    <header class="main-header">
-        <div class="logo">
-            <h1>Cidadania<span>Digital</span></h1>
-        </div>
-        <button id="toggle-accessibility" class="btn-accessible" aria-label="Alternar modo escuro">🌓 Modo Escuro</button>
-    </header>
+<header>
+<h1>Cidadania Digital e Inteligência Artificial</h1>
 
-    <!-- Conteúdo Principal Semântico -->
-    <main>
-        
-        <!-- Seção 1: Introdução e Contextualização -->
-        <section class="hero-section">
-            <h2>O Impacto das Deepfakes e da Desinformação na Sociedade</h2>
-            <p>Na era da Inteligência Artificial, a verdade tornou-se um terreno disputado. Vídeos, áudios e imagens manipulados digitalmente (deepfakes) testam nossa capacidade de discernir o real do fabricado. Desenvolver a cidadania digital significa blindar nossa mente contra a desinformação automatizada.</p>
-        </section>
+<nav>
+<a href="#deepfake">Deepfakes</a>
+<a href="#fake">Fake News</a>
+<a href="#dicas">Segurança</a>
+<a href="#quiz">Quiz</a>
+</nav>
 
-        <!-- Seção 2: Guia de Identificação -->
-        <section class="guide-section">
-            <h3>Como Identificar uma Mídia Manipulada por IA?</h3>
-            <div class="cards-container">
-                <div class="card">
-                    <h4>Pisos e Sombras</h4>
-                    <p>Fique atento a falhas na iluminação e reflexos irregulares nos olhos do interlocutor.</p>
-                </div>
-                <div class="card">
-                    <h4>Padrão de Piscada</h4>
-                    <p>Muitas deepfakes falham em replicar o ato natural e frequente de piscar os olhos.</p>
-                </div>
-                <div class="card">
-                    <h4>Áudio Dessincronizado</h4>
-                    <p>Preste atenção se os movimentos labiais correspondem perfeitamente aos fonemas emitidos.</p>
-                </div>
-            </div>
-        </section>
+<button id="modoEscuro">🌙 Modo Escuro</button>
 
-        <!-- Seção 3: Quiz Anti-Desinformação (Interatividade Obrigatória) -->
-        <section class="quiz-section">
-            <h3>Desafio da Verdade: Teste seus Conhecimentos</h3>
-            <p>Responda às perguntas abaixo e descubra se você está imune às armadilhas da desinformação.</p>
-            
-            <form id="quiz-form">
-                <!-- Pergunta 1 -->
-                <div class="quiz-group">
-                    <label for="q1">1. Se você recebe um vídeo bombástico de um político famoso cometendo um crime, qual o primeiro passo?</label>
-                    <select id="q1" required>
-                        <option value="">-- Selecione uma resposta --</option>
-                        <option value="errada">Compartilhar imediatamente nos grupos de família.</option>
-                        <option value="correta">Verificar em portais de checagem confiáveis e analisar os detalhes visuais.</option>
-                        <option value="errada">Acreditar piamente, pois vídeos não podem ser manipulados.</option>
-                    </select>
-                </div>
+</header>
 
-                <!-- Pergunta 2 -->
-                <div class="quiz-group">
-                    <label for="q2">2. O que caracteriza essencialmente uma "Deepfake"?</label>
-                    <select id="q2" required>
-                        <option value="">-- Selecione uma resposta --</option>
-                        <option value="errada">Uma notícia escrita com erros de gramática propositais.</option>
-                        <option value="errada">Uma montagem simples feita no Photoshop antigo.</option>
-                        <option value="correta">Vídeos ou áudios gerados por Inteligência Artificial que imitam perfeitamente pessoas reais.</option>
-                    </select>
-                </div>
+<main>
 
-                <button type="submit" class="btn-submit">Enviar Respostas</button>
-            </form>
+<section id="banner">
+<h2>Como a Inteligência Artificial pode ser usada para o bem e para o mal?</h2>
 
-            <!-- Div manipulada dinamicamente via JS -->
-            <div id="quiz-result" class="result-box hidden">
-                <p id="result-text"></p>
-            </div>
-        </section>
-    </main>
+<p>
+A Inteligência Artificial facilita muitas tarefas, mas também pode ser usada para criar conteúdos falsos, conhecidos como deepfakes, capazes de enganar milhares de pessoas.
+</p>
 
-    <!-- Rodapé Semântico -->
-    <footer class="main-footer">
-        <p>&copy; 2026 Conexão Segura. Desenvolvido para a Recuperação de Educação Digital e IA.</p>
-        <p>Projeto focado no debate ético e segurança digital comunitária.</p>
-    </footer>
+</section>
 
-    <script src="js/script.js"></script>
+<section id="deepfake">
+
+<h2>O que são Deepfakes?</h2>
+
+<p>
+Deepfakes são vídeos, imagens ou áudios criados por Inteligência Artificial que parecem reais, mas foram manipulados digitalmente.
+</p>
+
+</section>
+
+<section id="fake">
+
+<h2>Fake News Automatizadas</h2>
+
+<p>
+Com IA é possível produzir notícias falsas em grande quantidade, espalhando informações enganosas rapidamente pelas redes sociais.
+</p>
+
+</section>
+
+<section id="dicas">
+
+<h2>Como se proteger?</h2>
+
+<ul>
+
+<li>Verifique a fonte da informação.</li>
+
+<li>Desconfie de manchetes sensacionalistas.</li>
+
+<li>Pesquise em mais de um site.</li>
+
+<li>Nunca compartilhe sem confirmar.</li>
+
+<li>Utilize sites de checagem de fatos.</li>
+
+</ul>
+
+</section>
+
+<section id="quiz">
+
+<h2>Quiz</h2>
+
+<p>
+Antes de compartilhar uma notícia, o que você deve fazer?
+</p>
+
+<form id="formQuiz">
+
+<input type="radio" name="resposta" value="errado">
+Compartilhar rapidamente.
+
+<br><br>
+
+<input type="radio" name="resposta" value="certo">
+Verificar a fonte da informação.
+
+<br><br>
+
+<button type="submit">
+Responder
+</button>
+
+</form>
+
+<p id="resultado"></p>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+Projeto desenvolvido para Educação Digital e IA - 2026.
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
